@@ -1,0 +1,6 @@
+@CCCA16_NETv2.AccountApp_HostAddress = http://localhost:5294
+
+GET {{CCCA16_NETv2.AccountApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

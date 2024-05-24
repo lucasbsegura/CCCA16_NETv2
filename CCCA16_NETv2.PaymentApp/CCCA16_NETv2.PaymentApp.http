@@ -1,0 +1,6 @@
+@CCCA16_NETv2.PaymentApp_HostAddress = http://localhost:5116
+
+GET {{CCCA16_NETv2.PaymentApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
