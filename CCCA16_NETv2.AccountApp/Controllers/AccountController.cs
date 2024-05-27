@@ -15,7 +15,7 @@ namespace CCCA16_NETv2.AccountApp.Controllers
             _logger = logger;
         }
 
-        [HttpGet("Get")]
+        [HttpGet()]
         public async Task<AccountOutput> Get(Guid accountId, IAccountRepository accountRepository)
         {
             var getAccount = new GetAccount(accountRepository);

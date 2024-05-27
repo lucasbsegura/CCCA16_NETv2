@@ -1,3 +1,5 @@
+using CCCA16_NETv2.RideApp;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +8,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+// Add services to the container.
+builder.Services.AddHttpClient("AccountGateway", c =>
+{
+    c.BaseAddress = new Uri("https://localhost:7206/");
+});
+//Register DI
+DiRegistrator.RegisterServices(builder.Services);
 
 var app = builder.Build();
 
